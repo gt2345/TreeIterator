@@ -22,8 +22,9 @@ public class treeIterator implements Iterator {
                 cur = root;
                 while(cur != null) {
                     stack.addFirst(cur);
-                    cur = cur.left;
                     pre = cur;
+                    cur = cur.left;
+
                 }
                 break;
         }
@@ -68,7 +69,8 @@ public class treeIterator implements Iterator {
                 case postOrder:
                     while (true) {
                         cur = stack.peekFirst();
-                        if (pre == null || pre.left == cur || pre.right == cur) {
+                        
+                        if (pre.left == cur || pre.right == cur) {
                             pre = cur;
                             if (cur.left != null) {
                                 stack.addFirst(cur.left);

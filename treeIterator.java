@@ -69,7 +69,7 @@ public class treeIterator implements Iterator {
                 case postOrder:
                     while (true) {
                         cur = stack.peekFirst();
-                        
+
                         if (pre.left == cur || pre.right == cur) {
                             pre = cur;
                             if (cur.left != null) {
@@ -112,7 +112,7 @@ public class treeIterator implements Iterator {
         root.left = tr3;
         root.right = tr8;
 
-        treeIterator iter = new treeIterator(root, Type.postOrder);
+        TreeIterator1 iter = TreeIteratorFactory.getTreeIterator(root, IteratorType.POSTORDER);
         while (iter.hasNext()) {
             System.out.println(iter.next());
 
@@ -122,7 +122,7 @@ public class treeIterator implements Iterator {
 
 
 class TreeNode {
-    int key;
+    Integer key;
     TreeNode left;
     TreeNode right;
 

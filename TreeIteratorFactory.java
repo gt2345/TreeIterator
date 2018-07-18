@@ -1,7 +1,7 @@
 public class TreeIteratorFactory {
-    private static final IteratorType DEFAULT_TYPE = IteratorType.PREORDER;
+    private static final TreeIterator.Type DEFAULT_TYPE = TreeIterator.Type.PREORDER;
 
-    public static TreeIterator1 getTreeIterator(TreeNode root, IteratorType type) {
+    public static TreeIterator getTreeIterator(TreeNode root, TreeIterator.Type type) {
         switch (type) {
             case PREORDER:
                 return new PreOrderIterator(root);
@@ -14,7 +14,7 @@ public class TreeIteratorFactory {
         }
     }
 
-    public static TreeIterator1 getTreeIterator(TreeNode root) {
+    public static TreeIterator getTreeIterator(TreeNode root) {
         return getTreeIterator(root, DEFAULT_TYPE);
     }
 }

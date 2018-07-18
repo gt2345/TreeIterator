@@ -1,7 +1,7 @@
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class InOrderIterator implements TreeIterator1 {
+public class InOrderIterator implements TreeIterator {
 
     private Deque<TreeNode> stack;
     private TreeNode cur;

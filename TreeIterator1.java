@@ -1,12 +1,9 @@
 import java.util.Iterator;
 
 public interface TreeIterator1 extends Iterator {
+    enum Type {
+        INORDER, PREORDER, POSTORDER
+    }
 
-    boolean hasNext();
-
-    Object next();
 }
 
-enum IteratorType {
-    INORDER, PREORDER, POSTORDER
-}
